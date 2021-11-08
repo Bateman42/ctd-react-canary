@@ -1,6 +1,6 @@
 // Import React from "react" npm package
 import * as React from 'react';
-
+import TodoListItem from './TodoListItem';
 
 const todoList = [
     {
@@ -24,13 +24,15 @@ const todoList = [
 
 
 //Declare a function named TodoList
-let TodoList = () => (
+function TodoList() {
+  return (
     <ul>
-        {todoList.map(function (item) {
-          return <li key={item.id}>{item.title}</li>;
-        })}
+      {todoList.map((item) => (
+        <TodoListItem key={item.id} todo={item.title} />
+      ))}
     </ul>
-);
+  );
+}
 
 //Export TodoList function as default module
-export default TodoList; 
+export default TodoList;
