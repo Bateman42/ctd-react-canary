@@ -1,10 +1,12 @@
 // Import React from "react" npm package
-import * as React from 'react';
+import React from 'react';
 
 //Declare a function named TodoListItem
 
-const TodoListItem = (props) => {
-    return <li> {props.todo} </li>;
+let TodoListItem = (props) => {
+    return (
+    <li> {props.todo.title} </li>
+    );
 };
 
 /// Export TodoListItem function as default module

@@ -5,7 +5,6 @@ function AddTodoForm(props){
     const handleAddTodo = (event) => {
         event.preventDefault();
         const todoTitle = document.querySelector('input[name=title]').value;
-        console.log(todoTitle);
         props.onAddTodo(todoTitle);
         document.querySelector('form').reset();
     };
