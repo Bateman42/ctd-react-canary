@@ -3,9 +3,9 @@ import React from 'react';
 
 //Declare a function named TodoListItem
 
-let TodoListItem = (props) => {
+let TodoListItem = ({todo}) => {
     return (
-    <li> {props.todo.title} </li>
+    <li> {todo.title} </li>
     );
 };
 
