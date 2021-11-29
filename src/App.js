@@ -11,7 +11,7 @@ function App() {
   //const [addTodo,newTodo ] = React.useState('');
 
   React.useEffect(() => {
-    localStorage.setItem('savedTodoList', todoList);
+    localStorage.setItem('savedTodoList', JSON.stringify(todoList));
   }, [todoList]);
 
   function addTodo(newTodo){
