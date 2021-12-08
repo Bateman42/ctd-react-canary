@@ -3,9 +3,14 @@ import React from 'react';
 
 //Declare a function named TodoListItem
 
-let TodoListItem = ({todo}) => {
+let TodoListItem = ({todo, onRemoveTodo}) => {
     return (
-    <li> {todo.title} </li>
+    <li> 
+        {todo.title}
+        <button type="button" onClick={ () => {
+            onRemoveTodo(todo.id)
+        }}>Remove</button>
+    </li>
     );
 };
 
