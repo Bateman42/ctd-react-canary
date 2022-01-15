@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react'; //creates a JavaScript object. This object contains properties that are needed to make React work, such as React.createElement() and React.Component.
 import TodoList from './TodoList';
 import AddTodoForm from './AddTodoForm';
 
-function useSemiPersistentState() {
+/* function useSemiPersistentState() {
 
-  const [todoList, setTodoList] = React.useState(
+  const [todoList, setTodoList] = React.useState(  //when we call todoList and setTodo it will triggered useState method
 		JSON.parse(localStorage.getItem("savedTodoList"))
 	);
 
@@ -13,10 +13,18 @@ function useSemiPersistentState() {
   }, [todoList]);
 
   return [todoList, setTodoList];
-}
+} */
 
 function App() {
-  const [todoList, setTodoList] = useSemiPersistentState();
+  //const [todoList, setTodoList] = useSemiPersistentState();
+
+  const [todoList, setTodoList] = React.useState(  //when we call todoList and setTodo it will triggered useState method
+		JSON.parse(localStorage.getItem("savedTodoList"))
+	);
+
+  React.useEffect(() => {
+    localStorage.setItem('savedTodoList', JSON.stringify(todoList));
+  }, [todoList]);
   
   function addTodo(newTodo) {
 		setTodoList([...todoList, newTodo]);

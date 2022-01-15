@@ -5,7 +5,6 @@ import TodoListItem from './TodoListItem';
 
 //Declare a function named TodoList
 function TodoList({todoList, onRemoveTodo}) {
-
   return (
     <div>
       <ul>
