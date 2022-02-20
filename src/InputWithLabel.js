@@ -1,7 +1,5 @@
 import React from 'react';
 
-
-
 function InputWithLabel({children,todoTitle, handleTitleChange }){
     const inputRef = React.useRef(null);
     React.useEffect(() => {
