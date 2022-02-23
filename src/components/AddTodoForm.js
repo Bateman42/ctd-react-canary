@@ -1,8 +1,13 @@
 import React from 'react';
 import InputWithLabel from './InputWithLabel';
+import PropTypes from "prop-types";
 
 function AddTodoForm({onAddTodo}){
     const [todoTitle, setTodoTitle] = React.useState('');
+
+    AddTodoForm.propTypes = {
+		onAddTodo: PropTypes.func,
+	};
 
     const handleTitleChange = (e) => {
         const newTodoTitle = e.target.value;
