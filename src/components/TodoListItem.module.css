@@ -25,7 +25,6 @@ button{
     border: none;
     color: #ffffff;
     cursor: pointer;
-    width: 10%;
     height: 15px;
     border-radius: 5px;
     font-family: 'Poppins',sans-serif;
@@ -44,4 +43,3 @@ li{
     font-size: 14px;
     font-weight: 300;
 }
-
